@@ -11,7 +11,7 @@ export default function Page() {
   const [isLoading, setIsLoading] = useState(false)
   const handleGoogleSignUp = async () => {
     setIsLoading(true)
-    signIn("google", {redirectTo: "/dashboard"})
+    signIn("google", {redirectTo: "/interest"})
     setIsLoading(false)
   }
   return (

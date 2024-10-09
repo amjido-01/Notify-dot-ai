@@ -15,7 +15,7 @@ export default function Page() {
   const handleGoogleSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsLoading(true)
-    signIn("google", { redirectTo: "/dashboard" })
+    signIn("google", { redirectTo: "/interest" })
     setIsLoading(false)
   }
 
