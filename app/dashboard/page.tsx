@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react"
  
 export default function Dashboard() {
   const { data: session } = useSession()
-  // const router = useRouter()
+  // const router = useRouter() //
  
   return (
     <p>You are, welcome! {session?.user?.name}</p>
