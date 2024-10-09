@@ -18,6 +18,12 @@ const predefinedInterests = [
   { id: 'robotics', name: 'Robotics', icon: '🦾' },
   { id: 'ethics', name: 'AI Ethics', icon: '⚖️' },
   { id: 'future', name: 'Future of AI', icon: '🔮' },
+  { id: "business", name: "Business", icon: "💼" },
+  { id: "healthcare", name: "Healthcare", icon: "🏥" },
+  { id: "finance", name: "Finance", icon: "💰" },
+  { id: "gaming", name: "Gaming", icon: "🎮" },
+  { id: "education", name: "Education", icon: "📚" },
+  { id: "entertainment", name: "Entertainment", icon: "🎭" },
   // ... other predefined interests
 ]
 
