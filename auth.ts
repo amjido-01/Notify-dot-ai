@@ -17,12 +17,14 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       if (user?.id) {
         token.id = user.id;
       }
+      console.log(token, "token")
       return token;
     },
     async session({ session, token }) {
       if (token?.id) {
         session.user.id = token.id as string;
       }
+      console.log(session, "session")
       return session;
     },
   },
