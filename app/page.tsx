@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input";
 import { ReactTyped } from 'react-typed'
 import { BrainCircuit, Mail, Bell, Zap, ChevronRight, Menu, X, Microscope, Tractor, GraduationCap, Briefcase, Stethoscope, ShieldCheck } from "lucide-react"
-
+import revo from "@/app/public/revo.jpg";
 export default function Home() {
   const [scrollY, setScrollY] = useState(0)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -295,13 +295,6 @@ export default function Home() {
                   </Button>
                 </form>
                
-             
-
-
-
-
-
-
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -310,7 +303,7 @@ export default function Home() {
                 className="relative"
               >
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src={revo}
                   alt="AI Revolution"
                   width={600}
                   height={400}
