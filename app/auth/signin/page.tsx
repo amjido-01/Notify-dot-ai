@@ -9,7 +9,8 @@ import { signIn } from 'next-auth/react'
 
 export default function Page() {
   const [isLoading, setIsLoading] = useState(false)
-  const handleGoogleSignUp = async () => {
+  const handleGoogleSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
     setIsLoading(true)
     signIn("google", {redirectTo: "/interest"})
     setIsLoading(false)
@@ -37,9 +38,9 @@ export default function Page() {
           </p>
         </div>
         
-        <div className="mt-8">
+        <form onSubmit={handleGoogleSignUp} className="mt-8">
           <Button
-            onClick={handleGoogleSignUp}
+            type='submit'
             disabled={isLoading}
             className="w-full bg-white hover:bg-gray-200 text-gray-900 font-bold py-3 px-4 rounded-md transition-all duration-300 flex items-center justify-center"
           >
@@ -74,7 +75,7 @@ export default function Page() {
               </>
             )}
           </Button>
-        </div>
+        </form>
         
         <p className="mt-4 text-center text-sm text-gray-400">
           By signing up, you agree to our{' '}
