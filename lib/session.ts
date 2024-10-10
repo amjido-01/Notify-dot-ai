@@ -1,6 +1,6 @@
 import { decode } from "next-auth/jwt";
 
-export async function decrypt(cookie: string | undefined, salt: string) {
+export async function decrypt(cookie: string | undefined) {
   if (!cookie) return null;
 
   const decoded = await decode({

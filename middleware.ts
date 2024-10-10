@@ -11,7 +11,6 @@ const protectedRoutes = ["/dashboard", "/interest", "/profile", "auth/setting"]
 const publicRoutes = ["/auth/signin", "/auth/signup", "/"] 
 
 export default async function middleware(req: NextRequest) {	
-let val = process.env.NEXTAUTH_SECRET
 
   const userCookies = cookies()
   const path = req.nextUrl.pathname;
@@ -20,7 +19,7 @@ let val = process.env.NEXTAUTH_SECRET
 
  
   const sessionToken = userCookies.get("authjs.session-token")?.value;
-  const session = await decrypt(sessionToken, val as string);
+  const session = await decrypt(sessionToken);
   console.log(session, "session from middleware")
 
   if (isProtected && !session) {
