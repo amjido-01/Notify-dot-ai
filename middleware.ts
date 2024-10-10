@@ -20,7 +20,7 @@ export default async function middleware(req: NextRequest) {
  
   const sessionToken = userCookies.get("authjs.session-token")?.value;
   const session = await decrypt(sessionToken);
-  console.log(session, "session from middleware")
+  // console.log(session, "session from middleware")
 
   if (isProtected && !session) {
     return NextResponse.redirect(new URL("/auth/signin", req.url))
