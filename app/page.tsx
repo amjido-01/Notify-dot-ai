@@ -29,7 +29,7 @@ export default function Home() {
             AI Pulse
           </span>
         </Link>
-        <nav className="hidden md:flex border-2 border-red-500 items-center ml-auto gap-4 sm:gap-6">
+        <nav className="hidden md:flex items-center ml-auto gap-4 sm:gap-6">
           {['About', 'Contact', 'Blog', "Support"].map((item) => (
             <Link key={item} className="text-sm font-medium hover:text-[#50E3C2] transition-colors" href="#">
               {item}

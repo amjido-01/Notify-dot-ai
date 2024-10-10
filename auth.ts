@@ -1,16 +1,17 @@
 import NextAuth from "next-auth"
-// import GoogleProvider from "next-auth/providers/google"
 import prisma from "./lib/prisma";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import authConfig from "./auth.config"
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
+  adapter: PrismaAdapter(prisma),
   session: {
     strategy: "jwt",
   },
-  adapter: PrismaAdapter(prisma),
+  pages: {
+    signIn: "/auth/signin",
+  },
   ...authConfig,
-
   callbacks: {
     async jwt({ token, user }) {
       if (user?.id) {
