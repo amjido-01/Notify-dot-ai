@@ -45,12 +45,12 @@ export const config = {
 
  // if (isProtected && !session) {
   //  return NextResponse.redirect(new URL("/auth/signin", req.url))
-  }
+//  }
   // if (isPublic && !session) {
   //   return NextResponse.redirect(new URL("/auth/signin", req.url))
   // }
  // return NextResponse.next()
-}
+//}
 
 
 //export const config = {
